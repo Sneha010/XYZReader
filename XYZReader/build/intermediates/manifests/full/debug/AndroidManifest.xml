@@ -42,8 +42,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.ArticleListActivity" />
         </activity>
-        <activity android:name="com.example.xyzreader.ui.BaseActivity" >
-        </activity>
+        <activity android:name="com.example.xyzreader.ui.BaseActivity" />
 
         <service
             android:name="com.example.xyzreader.data.UpdaterService"
@@ -53,6 +52,11 @@
             android:name="com.example.xyzreader.data.ItemsProvider"
             android:authorities="com.example.xyzreader"
             android:exported="false" />
+
+        <activity
+            android:name="com.example.xyzreader.ui.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
