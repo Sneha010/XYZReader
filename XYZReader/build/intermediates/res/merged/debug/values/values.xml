@@ -225,7 +225,7 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="app_bar_height">220dp</dimen>
+    <dimen name="app_bar_height">260dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -258,12 +258,12 @@
     <dimen name="design_tab_scrollable_min_width">72dp</dimen>
     <dimen name="design_tab_text_size">14sp</dimen>
     <dimen name="design_tab_text_size_2line">12sp</dimen>
-    <dimen name="detail_body_bottom_margin">88dp</dimen>
-    <dimen name="detail_body_text_size">22sp</dimen>
+    <dimen name="detail_body_bottom_margin">20dp</dimen>
+    <dimen name="detail_body_text_size">18sp</dimen>
     <dimen name="detail_body_top_margin">16dp</dimen>
     <dimen name="detail_card_max_width">10000dp</dimen>
     <dimen name="detail_card_top_margin">@dimen/detail_photo_height</dimen>
-    <dimen name="detail_inner_horiz_margin">16dp</dimen>
+    <dimen name="detail_inner_horiz_margin">22dp</dimen>
     <dimen name="detail_metabar_title_bottom_padding">4dp</dimen>
     <dimen name="detail_metabar_vert_padding">16dp</dimen>
     <dimen name="detail_photo_height">304dp</dimen>

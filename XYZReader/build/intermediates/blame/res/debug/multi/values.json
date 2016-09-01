@@ -2076,14 +2076,7 @@
                     "endOffset": 35875
                 },
                 "from": {
-                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values\\dimens.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 389,
-                        "endColumn": 46,
-                        "endOffset": 431
-                    }
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
@@ -2539,7 +2532,14 @@
                     "endOffset": 38164
                 },
                 "from": {
-                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values\\macro_layout.xml"
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values\\macro_layout.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 390,
+                        "endColumn": 56,
+                        "endOffset": 442
+                    }
                 }
             },
             {

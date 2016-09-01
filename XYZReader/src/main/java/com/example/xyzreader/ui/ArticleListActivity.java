@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -157,6 +158,8 @@ public class ArticleListActivity extends BaseActivity implements
         public void onBindViewHolder(ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
+            holder.titleView.setTypeface(Typeface.createFromAsset(getAssets(), "Rosario-Regular.ttf"));
+            holder.subtitleView.setTypeface(Typeface.createFromAsset(getAssets(), "Rosario-Regular.ttf"));
             holder.subtitleView.setText(
                     DateUtils.getRelativeTimeSpanString(
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),

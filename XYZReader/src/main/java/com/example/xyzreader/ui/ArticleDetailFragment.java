@@ -9,18 +9,27 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +37,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
+import com.example.xyzreader.util.PaletteTransformation;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -46,14 +60,26 @@ public class ArticleDetailFragment extends Fragment implements
     private Cursor mCursor;
     private long mItemId;
     private View mRootView;
-    private int mMutedColor = 0xFF333333;
-    private ColorDrawable mStatusBarColorDrawable;
 
-    private ImageView mPhotoView;
     private boolean mIsCard = false;
+
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
 
     @Bind(R.id.collapsingToolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
+
+    @Bind(R.id.article_body)
+    TextView tvArticleBody;
+
+    @Bind(R.id.article_byline)
+    TextView tvArticleBy;
+
+    @Bind(R.id.ivPhoto)
+    ImageView ivPhoto;
+
+    private Typeface myTypeface;
+
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -77,6 +103,8 @@ public class ArticleDetailFragment extends Fragment implements
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
 
+        myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "Rosario-Regular.ttf");
+
         mIsCard = getResources().getBoolean(R.bool.detail_is_card);
         setHasOptionsMenu(true);
     }
@@ -94,6 +122,7 @@ public class ArticleDetailFragment extends Fragment implements
         // fragments because their mIndex is -1 (haven't been added to the activity yet). Thus,
         // we do this in onActivityCreated.
         getLoaderManager().initLoader(0, null, this);
+
     }
 
     @Override
@@ -101,10 +130,6 @@ public class ArticleDetailFragment extends Fragment implements
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
         ButterKnife.bind(this, mRootView);
-
-        mPhotoView = (ImageView) mRootView.findViewById(R.id.ivPhoto);
-
-        mStatusBarColorDrawable = new ColorDrawable(0);
 
         mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,24 +141,26 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
-        bindViews();
-        updateStatusBar();
+
+
         return mRootView;
     }
 
-    private void updateStatusBar() {
-      /*  int color = 0;
-        if (mPhotoView != null && mTopInset != 0 && mScrollY > 0) {
-            float f = progress(mScrollY,
-                    mStatusBarFullOpacityBottom - mTopInset * 3,
-                    mStatusBarFullOpacityBottom - mTopInset);
-            color = Color.argb((int) (255 * f),
-                    (int) (Color.red(mMutedColor) * 0.9),
-                    (int) (Color.green(mMutedColor) * 0.9),
-                    (int) (Color.blue(mMutedColor) * 0.9));
-        }
-        mStatusBarColorDrawable.setColor(color);
-        mDrawInsetsFrameLayout.setInsetBackground(mStatusBarColorDrawable);*/
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               getActivity().finish();
+            }
+        });
+
+        tvArticleBody.setTypeface(myTypeface);
+        tvArticleBy.setTypeface(myTypeface);
+
     }
 
     static float progress(float v, float min, float max) {
@@ -155,49 +182,41 @@ public class ArticleDetailFragment extends Fragment implements
             return;
         }
 
-        //TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
-        //TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
-        //bylineView.setMovementMethod(new LinkMovementMethod());
-        TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
-        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
-
         if (mCursor != null) {
             mRootView.setVisibility(View.VISIBLE);
             collapsingToolbarLayout.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
-           /* bylineView.setText(Html.fromHtml(
+            tvArticleBy.setText(Html.fromHtml(
                     DateUtils.getRelativeTimeSpanString(
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
                             System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
                             DateUtils.FORMAT_ABBREV_ALL).toString()
-                            + " by <font color='#ffffff'>"
+                            + " by <font color='#212121'>"
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)
-                            + "</font>"));*/
-            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
-            ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
-                    .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
-                        @Override
-                        public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
-                            Bitmap bitmap = imageContainer.getBitmap();
-                            if (bitmap != null) {
-                                Palette p = Palette.generate(bitmap, 12);
-                                mMutedColor = p.getDarkMutedColor(0xFF333333);
-                                mPhotoView.setImageBitmap(imageContainer.getBitmap());
-                                mRootView.findViewById(R.id.iv_support_bg)
-                                        .setBackgroundColor(mMutedColor);
-                                updateStatusBar();
-                            }
-                        }
+                            + "</font>"));
+            tvArticleBody.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
 
+            Picasso.with(getActivity())
+                    .load(mCursor.getString(ArticleLoader.Query.PHOTO_URL))
+                    .placeholder(R.drawable.article_icon)
+                    .transform(new PaletteTransformation())
+                    .into(ivPhoto, new Callback.EmptyCallback() {
                         @Override
-                        public void onErrorResponse(VolleyError volleyError) {
+                        public void onSuccess() {
+                            // TODO I can haz Palette?
+                            Bitmap bitmap = ((BitmapDrawable) ivPhoto.getDrawable()).getBitmap(); // Ew!
+                            Palette palette = PaletteTransformation.getPalette(bitmap);
+                            if (palette != null) {
+                                applyPalleteToWindow(palette);
+                            }
 
                         }
                     });
+
         } else {
             mRootView.setVisibility(View.GONE);
             collapsingToolbarLayout.setTitle("N/A");
-            //bylineView.setText("N/A" );
-            bodyView.setText("N/A");
+            tvArticleBy.setText("N/A" );
+            tvArticleBody.setText("N/A");
         }
     }
 
@@ -222,12 +241,14 @@ public class ArticleDetailFragment extends Fragment implements
             mCursor = null;
         }
 
+        if(isAdded())
         bindViews();
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
         mCursor = null;
+        if(isAdded())
         bindViews();
     }
 
@@ -237,4 +258,42 @@ public class ArticleDetailFragment extends Fragment implements
 
         ButterKnife.unbind(this);
     }
+
+    //Apply toolbar status and navigation color from palatte
+    private void applyPalleteToWindow(Palette palette) {
+
+
+        //Default colors for window
+        int colorPrimary = getResources().getColor(R.color.colorPrimary);
+        int colorPrimaryDark = getResources().getColor(R.color.colorPrimaryDark);
+
+
+        if (palette.getDarkMutedSwatch() != null) {
+
+            colorPrimaryDark = palette.getDarkMutedSwatch().getRgb();
+            colorPrimary = colorPrimaryDark;
+
+            float[] hsv = new float[3];
+            Color.colorToHSV(colorPrimaryDark, hsv);
+            hsv[2] *= 1.5f;
+            colorPrimary = Color.HSVToColor(hsv);
+        }
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(colorPrimaryDark);
+            window.setNavigationBarColor(colorPrimaryDark);
+
+            collapsingToolbarLayout.setContentScrimColor(colorPrimary);
+
+
+        }
+
+    }
+
 }

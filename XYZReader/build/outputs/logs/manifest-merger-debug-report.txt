@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:2:1-58:12
+ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:3:5-36
 	android:versionName
@@ -30,7 +30,7 @@ ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main
 	android:name
 		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:12:5-56:19
+ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:12:5-52:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v13:23.4.0] C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
@@ -123,14 +123,6 @@ ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main
 		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:50:13-37
 	android:name
 		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:48:13-47
-activity#com.example.xyzreader.ui.ScrollingActivity
-ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:52:9-55:56
-	android:label
-		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:54:13-61
-	android:theme
-		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:55:13-44
-	android:name
-		ADDED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml:53:13-49
 uses-sdk
 INJECTED from C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:support-v4:23.4.0] C:\Sneha_Material\NanoDegree\Go_Material\XYZReader\XYZReader\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43

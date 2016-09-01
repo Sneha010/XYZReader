@@ -115,4 +115,5 @@ public class ArticleDetailActivity extends BaseActivity
             return (mCursor != null) ? mCursor.getCount() : 0;
         }
     }
+
 }
