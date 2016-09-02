@@ -32,9 +32,6 @@ public class ArticleDetailActivity extends BaseActivity
     private Cursor mCursor;
     private long mStartId;
 
-    private long mSelectedItemId;
-    private int mSelectedItemUpButtonFloor = Integer.MAX_VALUE;
-
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
 
@@ -51,10 +48,23 @@ public class ArticleDetailActivity extends BaseActivity
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(mPagerAdapter);
 
+        mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (mCursor != null) {
+                    mCursor.moveToPosition(position);
+                }
+            }
+        });
+
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
                 mStartId = ItemsContract.Items.getItemId(getIntent().getData());
-                mSelectedItemId = mStartId;
             }
         }
     }
