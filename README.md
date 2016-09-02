@@ -1,6 +1,6 @@
 ## NANODEGREE APP : XYZReader
 
-With this explore CardView , RecyclerView , CoordinatorLayout and bunch of cool android supported design stuff.
+With this, Explore CardView , RecyclerView , CoordinatorLayout and bunch of cool android supported design stuff.
 
 #### ScreenShots
 
