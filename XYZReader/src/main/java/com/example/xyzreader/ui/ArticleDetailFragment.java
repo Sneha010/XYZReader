@@ -79,6 +79,7 @@ public class ArticleDetailFragment extends Fragment implements
     ImageView ivPhoto;
 
     private Typeface myTypeface;
+    private String shareText;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -106,11 +107,6 @@ public class ArticleDetailFragment extends Fragment implements
         myTypeface = Typeface.createFromAsset(getActivity().getAssets(), "Rosario-Regular.ttf");
 
         mIsCard = getResources().getBoolean(R.bool.detail_is_card);
-        setHasOptionsMenu(true);
-    }
-
-    public ArticleDetailActivity getActivityCast() {
-        return (ArticleDetailActivity) getActivity();
     }
 
     @Override
@@ -136,7 +132,7 @@ public class ArticleDetailFragment extends Fragment implements
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
-                        .setText("Some sample text")
+                        .setText(shareText!=null?shareText:"Checkout the article")
                         .getIntent(), getString(R.string.action_share)));
             }
         });
@@ -154,7 +150,7 @@ public class ArticleDetailFragment extends Fragment implements
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               getActivity().finish();
+                getActivity().finish();
             }
         });
 
@@ -162,17 +158,6 @@ public class ArticleDetailFragment extends Fragment implements
         tvArticleBy.setTypeface(myTypeface);
 
     }
-
-    static float constrain(float val, float min, float max) {
-        if (val < min) {
-            return min;
-        } else if (val > max) {
-            return max;
-        } else {
-            return val;
-        }
-    }
-
     private void bindViews() {
         if (mRootView == null) {
             return;
@@ -180,16 +165,20 @@ public class ArticleDetailFragment extends Fragment implements
 
         if (mCursor != null) {
             mRootView.setVisibility(View.VISIBLE);
+            tvArticleBy.setMovementMethod(new LinkMovementMethod());
             collapsingToolbarLayout.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
             tvArticleBy.setText(Html.fromHtml(
                     DateUtils.getRelativeTimeSpanString(
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
                             System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
                             DateUtils.FORMAT_ABBREV_ALL).toString()
-                            + " by <font color='#212121'>"
+                            + " by <font color='#00796B'><b>"
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)
-                            + "</font>"));
+                            + "</b></font>"));
             tvArticleBody.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
+
+            //forming the share text
+            shareText = "Check out the article on \""+ mCursor.getString(ArticleLoader.Query.TITLE)+"\" by "+ mCursor.getString(ArticleLoader.Query.AUTHOR);
 
             Picasso.with(getActivity())
                     .load(mCursor.getString(ArticleLoader.Query.PHOTO_URL))
