@@ -163,10 +163,6 @@ public class ArticleDetailFragment extends Fragment implements
 
     }
 
-    static float progress(float v, float min, float max) {
-        return constrain((v - min) / (max - min), 0, 1);
-    }
-
     static float constrain(float val, float min, float max) {
         if (val < min) {
             return min;
@@ -203,10 +199,13 @@ public class ArticleDetailFragment extends Fragment implements
                         @Override
                         public void onSuccess() {
                             // TODO I can haz Palette?
-                            Bitmap bitmap = ((BitmapDrawable) ivPhoto.getDrawable()).getBitmap(); // Ew!
-                            Palette palette = PaletteTransformation.getPalette(bitmap);
-                            if (palette != null) {
-                                applyPalleteToWindow(palette);
+                            if(ivPhoto!=null){
+                                Bitmap bitmap = ((BitmapDrawable) ivPhoto.getDrawable()).getBitmap(); // Ew!
+                                Palette palette = PaletteTransformation.getPalette(bitmap);
+                                if (palette != null) {
+                                    applyPalleteToWindow(palette);
+                                }
+
                             }
 
                         }
@@ -248,8 +247,8 @@ public class ArticleDetailFragment extends Fragment implements
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
         mCursor = null;
-        if(isAdded())
-        bindViews();
+        /*if(isAdded())
+        bindViews();*/
     }
 
     @Override
