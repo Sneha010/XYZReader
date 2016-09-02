@@ -1,0 +1,351 @@
+[
+    {
+        "outputFile": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 68,
+                    "endOffset": 119
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 124,
+                    "endColumn": 69,
+                    "endOffset": 189
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 194,
+                    "endColumn": 73,
+                    "endOffset": 263
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 268,
+                    "endColumn": 75,
+                    "endOffset": 339
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 344,
+                    "endColumn": 58,
+                    "endOffset": 398
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 403,
+                    "endColumn": 70,
+                    "endOffset": 469
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 474,
+                    "endColumn": 67,
+                    "endOffset": 537
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 542,
+                    "endColumn": 59,
+                    "endOffset": 597
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 602,
+                    "endColumn": 69,
+                    "endOffset": 667
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 672,
+                    "endColumn": 70,
+                    "endOffset": 738
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 743,
+                    "endColumn": 71,
+                    "endOffset": 810
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 815,
+                    "endColumn": 57,
+                    "endOffset": 868
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 873,
+                    "endColumn": 57,
+                    "endOffset": 926
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 931,
+                    "endColumn": 105,
+                    "endOffset": 1032
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1037,
+                    "endColumn": 63,
+                    "endOffset": 1096
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1101,
+                    "endColumn": 56,
+                    "endOffset": 1153
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1158,
+                    "endColumn": 52,
+                    "endOffset": 1206
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 93,
+                        "endColumn": 52,
+                        "endOffset": 141
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1211,
+                    "endColumn": 54,
+                    "endOffset": 1261
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1266,
+                    "endColumn": 56,
+                    "endOffset": 1318
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1323,
+                    "endColumn": 65,
+                    "endOffset": 1384
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1389,
+                    "endColumn": 58,
+                    "endOffset": 1443
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1448,
+                    "endColumn": 51,
+                    "endOffset": 1495
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\macro_layout.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1500,
+                    "endColumn": 53,
+                    "endOffset": 1549
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1554,
+                    "endColumn": 41,
+                    "endOffset": 1591
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1596,
+                    "endColumn": 94,
+                    "endOffset": 1686
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\src\\main\\res\\values-sw600dp\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1691,
+                    "endColumn": 54,
+                    "endOffset": 1741
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1746,
+                    "endColumn": 62,
+                    "endOffset": 1804
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1809,
+                    "endLine": 32,
+                    "endColumn": 12,
+                    "endOffset": 1986
+                },
+                "from": {
+                    "file": "C:\\Sneha_Material\\NanoDegree\\Go_Material\\XYZReader\\XYZReader\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml"
+                }
+            }
+        ]
+    }
+]

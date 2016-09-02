@@ -22,4 +22,4 @@
             android:contentDescription="@string/up"
             android:src="@drawable/ic_arrow_back" />
     </FrameLayout>
-</FrameLayout><!-- From: file:/F:/My%20Apps/NanoDegree/MaterialApp/xyzreader/XYZReader/src/main/res/layout/activity_article_detail.xml -->
+</FrameLayout><!-- From: file:/C:/Sneha_Material/NanoDegree/Go_Material/XYZReader/XYZReader/src/main/res/layout/activity_article_detail.xml -->
